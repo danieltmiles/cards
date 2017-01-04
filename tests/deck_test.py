@@ -1,8 +1,8 @@
 import copy
 import unittest
 
-from cards.deck import Deck
 from cards.card import Card
+from cards.deck import Deck
 
 
 class DeckTest(unittest.TestCase):

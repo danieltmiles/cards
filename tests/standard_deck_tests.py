@@ -2,22 +2,16 @@ import copy
 import unittest
 
 from cards.card import Card
-from cards.deck import Deck
+from cards.standard_deck import StandardDeck
 
 
-class DeckTest(unittest.TestCase):
+class StandardDeckTest(unittest.TestCase):
     def test_init(self):
-        my_deck = Deck(Deck.StandardDeck)
+        my_deck = StandardDeck()
         self.assertEquals(len(my_deck.cards), 52)
 
-    # this serves as a reminder to future developers to make unit tests when they implement
-    def test_not_implemented(self):
-        self.failUnlessRaises(NotImplementedError, Deck, Deck.CanastaDeck)
-        self.failUnlessRaises(NotImplementedError, Deck, Deck.PinochleDeck)
-        self.failUnlessRaises(NotImplementedError, Deck, Deck.StandardDeckWithJokers)
-
     def test_shuffle(self):
-        my_deck = Deck(Deck.StandardDeck)
+        my_deck = StandardDeck()
         original_order = ", ".join(["%s::%s" % (str(x.value), str(x.suit)) for x in my_deck.cards])
 
         my_deck.shuffle()
@@ -26,7 +20,7 @@ class DeckTest(unittest.TestCase):
         self.assertNotEquals(original_order, new_order)
 
     def test_draw(self):
-        my_deck = Deck(Deck.StandardDeck)
+        my_deck = StandardDeck()
         original_cards_length = len(my_deck.cards)
         my_card = my_deck.draw()
         self.assertIsInstance(my_card, Card)
@@ -34,7 +28,7 @@ class DeckTest(unittest.TestCase):
         self.assertEquals(len(my_deck.drawn), 1)
 
     def test_draw_two(self):
-        my_deck = Deck(Deck.StandardDeck)
+        my_deck = StandardDeck()
         original_cards_length = len(my_deck.cards)
         my_cards = my_deck.draw(2)
         self.assertIsInstance(my_cards, list)
@@ -45,7 +39,7 @@ class DeckTest(unittest.TestCase):
         self.assertEquals(len(my_deck.drawn), 2)
 
     def test_draw_all(self):
-        my_deck = Deck(Deck.StandardDeck)
+        my_deck = StandardDeck()
         original_cards_length = len(my_deck.cards)
         for i in xrange(original_cards_length):
             my_deck.draw()

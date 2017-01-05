@@ -1,4 +1,3 @@
-import copy
 import unittest
 
 from cards.card import Card

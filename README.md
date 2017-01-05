@@ -14,6 +14,7 @@ and will validate that the card is valid.
  * \__init__(suit, value)
 Creates a card with the given suit and value, raising a ValueError if
 the combination does not fit within the French Playing Card set.
+
 ### Data Members
  * ValidSuits -- list -- A list of the suits available in French Playing Cards
  * ValidValues -- list -- A list of the values available within a suit of French Playing Cards
@@ -27,6 +28,7 @@ the combination does not fit within the French Playing Card set.
  * draw(draw_count=1) -- card object -- SIDE EFFECT, find and return the first _draw_count_ cards in the deck,
  removing them from the list of cards that may be returned in the future. If the deck has no more cards
  to be drawn or if it has fewer than draw_count, it will return None
+ 
 ### Data Members
 _no public data members_
 
@@ -35,6 +37,7 @@ _no public data members_
  * \__init__() Initializes a deck with the standard 52 cards
  * shuffle() -- None -- Inherited from base class
  * draw(draw_count=1) -- Inherited from base class
+ 
 ### Data Members
 _no public data members_
 
@@ -43,5 +46,6 @@ _no public data members_
  * \__init__() Initializes a deck with two sets of the standard 52 cards and four jokers.
  * shuffle() -- None -- Inherited from base class
  * draw(draw_count=1) -- Inherited from base class
+ 
 ### Data Members
 _no public data members_

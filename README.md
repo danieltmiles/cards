@@ -35,3 +35,10 @@ _no public data members_
  * draw(draw_count=1) -- Inherited from base class
 ### Data Members
 _no public data members_
+## CanastaDeck Object -- Inherits from Deck
+### Methods
+ * \__init__() Initializes a deck with two sets of the standard 52 cards and four jokers.
+ * shuffle() -- None -- Inherited from base class
+ * draw(draw_count=1) -- Inherited from base class
+### Data Members
+_no public data members_

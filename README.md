@@ -19,6 +19,7 @@ the combination does not fit within the French Playing Card set.
  * ValidValues -- list -- A list of the values available within a suit of French Playing Cards
  * suit -- string -- the suit of the card object
  * value -- string in the case of _ace_, _jack_, _queen_ or _king_, an integer in cases of 2-10
+ 
 ## Deck Class -- Abstract, may not be instantiated
 ### Methods
  * \__init__() to be called by child-class only
@@ -28,6 +29,7 @@ the combination does not fit within the French Playing Card set.
  to be drawn or if it has fewer than draw_count, it will return None
 ### Data Members
 _no public data members_
+
 ## StandardDeck Object -- Inherits from Deck
 ### Methods
  * \__init__() Initializes a deck with the standard 52 cards
@@ -35,6 +37,7 @@ _no public data members_
  * draw(draw_count=1) -- Inherited from base class
 ### Data Members
 _no public data members_
+
 ## CanastaDeck Object -- Inherits from Deck
 ### Methods
  * \__init__() Initializes a deck with two sets of the standard 52 cards and four jokers.
